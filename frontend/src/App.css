@@ -1,8 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css - Component and page specific styles */
+
+/* Left: Logo + Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-box {
+  width: 80px;      /* or whatever fits your layout */
+  height: 80px;
+  /* optionally center the svg inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-svg {
+  width: 100%;      /* fill the container */
+  height: 100%;
+  display: block;
+}
+
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+}
+
+nav {
+  background-color: var(--nav-bg);
+  padding: 1rem;
   text-align: center;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--nav-link-hover);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
 }
 
 .logo {
@@ -11,26 +57,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
@@ -39,4 +72,87 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* About page */
+.about-container {
+  padding: 2rem;
+  background-color: var(--card-bg);
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  color: var(--text-color);
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.about-container h1,
+.about-container h2,
+.about-container h3 {
+  color: var(--primary-color);
+}
+
+.about-container p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Home page */
+.home-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: var(--text-color);
+}
+
+.home-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Service page */
+.service-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: var(--text-color);
+  text-align: left;
+}
+
+.service-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-list li {
+  background-color: var(--secondary-bg, #f0f0f0); /* fallback color */
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: var(--text-color);
+  font-weight: 500;
 }

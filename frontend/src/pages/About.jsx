@@ -30,8 +30,12 @@ export default function About()
         technical skills.
       </p>
       <p>
-        <strong>Tools I’m working with:</strong> React, JavaScript,
-        HTML, CSS, Node.js, Express, MongoDB, Oracle SQL, C#
+       <strong>Technical skills:</strong>
+        <ul>
+          <li><strong>Frontend:</strong> React, JavaScript, HTML, CSS</li>
+          <li><strong>Backend:</strong> Node.js, Express, C#</li>
+          <li><strong>Databases:</strong> MongoDB, Oracle SQL</li>
+         </ul>
       </p>
       <p>
         I'm actively seeking internship or junior developer opportunities where
@@ -42,24 +46,21 @@ export default function About()
 
       <h2>Education & Coursework Highlights</h2>
 
-      <h3>Current Courses</h3>
-      <ul>
-        <li>Web Application Development</li>
-      </ul>
 
       <h3>Completed Courses</h3>
       <ul>
-        <li>Data Structures & Algorithms</li>
-        <li>Enterprise Systems Integration (ESI)</li>
-        <li>IT Project Management</li>
-        <li>Advanced Database Concepts (MySQL/SQL Server)</li>
-        <li>Software Testing & Quality</li>
-        <li>Clinical Workflow & IT Solutions</li>
-        <li>Tools, Algorithms & Methods for HCIS</li>
-        <li>Programming in C#, JavaScript, Python</li>
-        <li>Client-side Web Development</li>
-        <li>Unix/Linux, Networking for Developers</li>
-        <li>Business Communication, Entrepreneurship</li>
+        <li>1.Data Structures & Algorithms</li>
+        <li>2.Enterprise Systems Integration (ESI)</li>
+        <li>3.IT Project Management</li>
+        <li>4.Advanced Database Concepts (MySQL/SQL Server)</li>
+        <li>5.Software Testing & Quality</li>
+        <li>6.Clinical Workflow & IT Solutions</li>
+        <li>7.Tools, Algorithms & Methods for HCIS</li>
+        <li>8.Programming in C#, JavaScript, Python</li>
+        <li>9.Client-side Web Development</li>
+        <li>10.Unix/Linux, Networking for Developers</li>
+        <li>11.Business Communication, Entrepreneurship</li>
+        <li>12.Web Application Development</li>
       </ul>
     
          </div>

@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Service from './pages/Service';
+import Projects from './pages/Projects';
+import Contacts from './pages/Contacts';
+import Experience from './pages/Experience';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import ProjectDetails from './pages/project_details';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // User state logic
+  const getUserFromStorage = () => {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem("username");
+    return token && username ? { username } : null;
+  };
+
+  const [user, setUser] = useState(getUserFromStorage());
+
+  useEffect(() => {
+    setUser(getUserFromStorage());
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    setUser(null);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <Routes>
+        <Route path="/" element={<Layout user={user} onLogout={handleLogout} />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="service" element={<Service />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="project-details" element={<ProjectDetails />} />
+          <Route path="project-details/:id" element={<ProjectDetails />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    
+  );
 }
 
-export default App
+export default App;

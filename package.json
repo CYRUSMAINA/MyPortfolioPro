@@ -2,20 +2,22 @@
   "name": "myportfoliopro",
   "version": "1.0.0",
   "main": "server.js",
-  "workspaces":[
+  "workspaces": [
     "frontend",
     "backend"
   ],
   "scripts": {
     "start": "npm-run-all --parallel start:frontend start:backend",
-    "start:frontend":"npm --prefix frontend run dev",
-    "start:backend":"npm --prefix backend run dev",
+    "start:frontend": "npm --prefix frontend run dev",
+    "start:backend": "npm --prefix backend run dev",
     "build": "npm-run-all --parallel build:frontend build:backend",
-    "build:frontend":"npm --prefix frontend run build",
-    "build:backend":"npm --prefix backend run build"
-
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run build"
   },
   "author": "cyrus maina",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react-router-dom": "^7.8.0"
+  }
 }
