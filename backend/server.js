@@ -28,13 +28,10 @@ const app = express();
 
 
 // MongoDb connection
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
-const connection = mongoose.connection;
-connection.on('error', console.error.bind(console, 'MongoDB connection error'));
-connection.once('open', () => {
-  console.log('Connected to MongoDB');
-});
 
 // Middleware
 app.use(express.json());
