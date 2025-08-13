@@ -25,7 +25,6 @@ export default function Home()
             
             <h1>My name is  Cyrus Maina.</h1>
             <h2>Welcome to my portfolio.</h2>
-            <h2>{data && data.message}</h2>
             <p>This site showcases my skills,projects and experience. </p>
             <section style={{marginTop:'2rem',marginBottom:'2rem'}}>
             <h3>Mission statement</h3>
